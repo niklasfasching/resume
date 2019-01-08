@@ -1,0 +1,46 @@
+* General                                                           :general:
+- firstname       :: John
+- lastname        :: Doe
+- jobname         :: Computer Person
+- address         :: Some Street 1, 12345 Someplace
+- phone           :: [[tel:+017612345678][0176 12345678]]
+- email           :: [[mailto:john.doe@example.com][john.doe@example.com]]
+- url             :: [[https://johndoe.com][johndoe.com]]
+- github          :: [[https://example.com][john.doe]]
+- stackoverflow   :: [[https://example.com][john.doe]]
+- summary         ::
+     Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
+     eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
+     periculis. At omnes reprimique cum. Ne iusto facilisi signiferumque usu,
+     agam brute tantas an vim, mea enim iusto mucius at. His ea ullum
+     dignissim, eu quando facilis pertinax mei, autem graece ex mel.
+
+* Education                                                       :education:
+** BSc Computers
+- cerütificate :: BSc Computers
+- institution :: Computer University
+- time :: 10.2000 - 01.2003
+
+** MSc Computers
+- certificate :: MSc Computers
+- institution :: Computer University
+- time :: 10.2003 - 01.2005
+
+* Experience                                                     :experience:
+** work 1
+- company   :: [[https://www.example.com][Company]]
+- time      :: Januar 2015 - now
+- jobname  :: Computer Person
+- address   :: Company Street 1, 12345 Someplace
+- summary   ::
+  Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
+  eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
+  periculis. At omnes reprimique cum. Ne iusto facilisi signiferumque usu,
+  agam brute tantas an vim, mea enim iusto mucius at. His ea ullum
+  dignissim, eu quando facilis pertinax mei, autem graece ex mel.
+* Skills                                                             :skills:
+- Computers
+- Printers
+- Big Data
+* Recommendations                                           :recommendations:
+- *Someone Special*: I recommend John Doe

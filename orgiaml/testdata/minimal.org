@@ -1,0 +1,2 @@
+* headline                                                              :foo:
+*this* will be the value of foo

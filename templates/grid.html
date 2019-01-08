@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <style type='text/less'>
+     html {
+       font: 10px/1.5 'Helvetica', sans-serif;
+     }
+
+     * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
+
+     a {
+       color: black;
+       text-decoration: none;
+     }
+
+     ul {
+       list-style: none outside;
+       padding: 0 0 1em 1em;
+       li:before {
+         display: inline-block;
+         content: "-";
+         width: 1em;
+         margin-left: -1em;
+       }
+     }
+
+     .title {
+       text-transform: uppercase;
+       letter-spacing: .25em;
+       padding-bottom: 1em;
+     }
+
+     .resume {
+       height: 297mm; /* DIN A4 */
+       width: 210mm;    /* DIN A4 */
+       margin: 1rem auto;
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       grid-auto-rows: minmax(20%, auto);
+       grid-gap: 10px;
+     }
+
+     section {
+       /* border: 1px dashed #eee; */
+       padding: 1rem;
+     }
+
+     .header {
+       grid-column: 1 / -1;
+       display: flex;
+       justify-content: space-between;
+
+       .name {
+         font-size: 6rem;
+         line-height: 1.2;
+
+         .first-name {
+           font-weight: 900;
+         }
+
+         .last-name {
+           font-weight: 100;
+           color: #666;
+         }
+       }
+
+       .job-name {
+         text-align: right;
+         justify-content: flex-end;
+         align-self: flex-end;
+         padding: 0;
+       }
+     }
+
+     .education {
+       li + li {
+         margin-top: 1.5em;
+       }
+       .certificate {
+         font-weight: 900;
+       }
+       .time {
+         color: #888;
+       }
+     }
+
+     .experience {
+       grid-column: 2;
+       grid-row: 3 / 5;
+
+       .job-name {
+         font-weight: 900;
+       }
+
+       .time {
+         color: #888;
+       }
+
+       li + li {
+         margin-top: 4em;
+       }
+     }
+    </style>
+    <script data-strict-math="true" type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js'></script>
+  </head>
+
+  <body class="resume">
+    <section class="header">
+      <h1 class="name title">
+        <span class="first-name">
+          {{ .General.FirstName }}
+        </span>
+        <br>
+        <span class="last-name">
+          {{ .General.LastName }}
+        </span>
+      </h1>
+      <h2 class="job-name title">
+        {{ .General.JobName }}
+      </h2>
+    </section>
+
+    <section class="contact">
+      <h2 class="section-title title">Contact</h2>
+      <ul class="basics">
+        <li class="phone">{{ .General.Phone }}</li>
+        <li class="email">{{ .General.Email }}</li>
+        {{ if .General.Address }}
+        <li class="address"><span>{{ .General.Address }}</span></li>
+        {{ end }}
+      </ul>
+      <ul class="profiles">
+        {{ if .General.Github }}
+        <li class="github"><span>github</span>: {{ .General.Github }}</li>
+        {{ end }}
+        {{ if .General.Stackoverflow }}
+        <li class="stackoverflow"><span>stackoverflow</span>: {{ .General.Stackoverflow }}</li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <section class="summary">
+      <h2 class="title">Summary</h2>
+      <p>
+        {{ .General.Summary }}
+      </p>
+    </section>
+
+    <section class="education">
+      <h2 class="section-title title">Education</h2>
+      <ul>
+        {{ range .Education }}
+        <li><span class="certificate">{{ .Certificate }}</span>
+          <br>
+          <span class="institution">{{ .Institution }} </span>
+          <br>
+          <span class="time">{{ .Time }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <section class="experience">
+      <h2 class="section-title title">Experience</h2>
+      <ul>
+        {{ range .Experience }}
+        <li><span class="job-name">{{ .JobName }}</span>
+          <br>
+          <span class="company">{{ .Company }}</span>
+          <br>
+          <span class="address">{{ .Address }}</span>
+          <br>
+          <span class="time">{{ .Time }}</span>
+          <br>
+          <p class="summary">{{ .Summary }}</p>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <section class="skills">
+      <h2 class="title">Skills</h2>
+      <ul>
+        {{ range .Skills }}
+        <li>{{ . }}</li>
+        {{ end}}
+      </ul>
+    </section>
+    <section class="recommendations">
+      <h2 class="title">Recommendations</h2>
+      <ul>
+        {{ range .Recommendations }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </section>
+  </body>
+</html>

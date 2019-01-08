@@ -1,0 +1,8 @@
+* resume https://travis-ci.org/niklasfasching/resume.svg?branch=master
+Write your resume in a bastardized version Org mode and render it as html
+* todo
+- resume data validation (something like the jsonresume jsonschema)
+- extend templates with microdata
+  - http://microformats.org/wiki/hresume + http://microformats.org/wiki/hcard-examples
+  - https://schema.org/Person
+

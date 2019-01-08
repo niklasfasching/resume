@@ -1,0 +1,49 @@
+#!/bin/bash
+set -eu
+
+rm -rf gh-pages
+mkdir -p gh-pages
+
+resume_file=testdata/resume.org
+template_files=templates/*.html
+html="
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Templates</title>
+    <style>
+      html, body {
+        height: 100%;
+      }
+
+      .sections { margin-left: 2rem; }
+      .sections a { display: block; padding: 0.25em 0; }
+      .sections a:hover, .sections a:focus, .sections a:active { background: rgba(200, 200, 200, 0.2); }
+      iframe {
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+        border: 1px dashed grey;
+        overflow: hidden;
+      }
+    </style>
+    <script type='text/javascript'>
+     function resize(iframe) {
+       console.log('resizing', iframe)
+       iframe.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+     }
+</script>
+  </head>
+<body>"
+for template_file in $template_files; do
+    echo generating content for $template_file
+    name=$(basename $template_file)
+    ./resume "$resume_file" "$template_file" > "gh-pages/${name}"
+    html+="
+      <h2><a href='${name}' href='#toc-${name}'>${name}</a></h2>
+      <iframe src='$name' onload='resize(this)' scrolling='no'></iframe>"
+done
+
+html+="</body></html>"
+echo "$html" > gh-pages/index.html
