@@ -17,7 +17,7 @@
 
 * Education                                                       :education:
 ** BSc Computers
-- cerütificate :: BSc Computers
+- certificate :: BSc Computers
 - institution :: Computer University
 - time :: 10.2000 - 01.2003
 
@@ -42,5 +42,6 @@
 - Computers
 - Printers
 - Big Data
+  - MongoDB
 * Recommendations                                           :recommendations:
 - *Someone Special*: I recommend John Doe

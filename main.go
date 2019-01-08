@@ -45,7 +45,7 @@ type Resume struct {
 		Time        string
 	}
 
-	Skills          []string
+	Skills          string
 	Recommendations []string
 }
 
