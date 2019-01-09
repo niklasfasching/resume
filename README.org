@@ -1,4 +1,4 @@
-* resume https://travis-ci.org/niklasfasching/resume.svg?branch=master
+* resume [[https://travis-ci.org/niklasfasching/resume.svg?branch=master]]
 Write your resume in a bastardized version Org mode and render it as html
 * todo
 - resume data validation (something like the jsonresume jsonschema)
