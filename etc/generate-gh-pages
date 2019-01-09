@@ -39,7 +39,8 @@ html="
 for template_file in $template_files; do
     echo generating content for $template_file
     name=$(basename $template_file)
-    ./resume "$resume_file" "$template_file" > "gh-pages/${name}"
+    ./resume render "$resume_file" "$template_file"
+    mv resume.html "gh-pages/${name}"
     html+="
       <h2><a href='${name}' href='#toc-${name}'>${name}</a></h2>
       <iframe src='$name' onload='resize(this)' scrolling='no'></iframe>"

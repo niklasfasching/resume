@@ -6,6 +6,11 @@
     <style type='text/less'>
      @import (css) url('https://fonts.googleapis.com/css?family=Karla');
 
+     @media print {
+       @page { margin: 0; } /* hide header & footer added to margin of printed pdfs */
+       body { padding: 0 1cm 1cm 1cm; }
+     }
+
      html {
        font: 14px/1.4 'Karla', sans-serif;
      }
