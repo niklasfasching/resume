@@ -29,9 +29,20 @@
 * Experience                                                     :experience:
 ** work 1
 - company   :: [[https://www.example.com][Company]]
-- time      :: Januar 2015 - now
-- jobname  :: Computer Person
+- time      :: Januar 2015 - December 2015
+- jobname   :: Computer Person
 - address   :: Company Street 1, 12345 Someplace
+- summary   ::
+  Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
+  eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
+  periculis. At omnes reprimique cum. Ne iusto facilisi signiferumque usu,
+  agam brute tantas an vim, mea enim iusto mucius at. His ea ullum
+  dignissim, eu quando facilis pertinax mei, autem graece ex mel.
+** work 2
+- company   :: [[https://www.example.com][Company 2]]
+- time      :: Januar 2016 - now
+- jobname   :: Computer Person
+- address   :: Company Street 2, 12345 Someplace
 - summary   ::
   Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
   eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
@@ -45,3 +56,4 @@
   - MongoDB
 * Recommendations                                           :recommendations:
 - *Someone Special*: I recommend John Doe
+- *Someone Special 2*: I also recommend John Doe very much
