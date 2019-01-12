@@ -8,6 +8,7 @@
 - url             :: [[https://johndoe.com][johndoe.com]]
 - github          :: [[https://example.com][john.doe]]
 - stackoverflow   :: [[https://example.com][john.doe]]
+- linkedin        :: [[https://example.com][John Doe]]
 - summary         ::
      Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
      eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
@@ -19,17 +20,17 @@
 ** BSc Computers
 - certificate :: BSc Computers
 - institution :: Computer University
-- time :: 10.2000 - 01.2003
+- time :: Sep 2000 - Jan 2003
 
 ** MSc Computers
 - certificate :: MSc Computers
 - institution :: Computer University
-- time :: 10.2003 - 01.2005
+- time :: Sep 2003 - Jan 2005
 
 * Experience                                                     :experience:
 ** work 1
 - company   :: [[https://www.example.com][Company]]
-- time      :: Januar 2015 - December 2015
+- time      :: Jan 2015 - Dec 2015
 - jobname   :: Computer Person
 - address   :: Company Street 1, 12345 Someplace
 - summary   ::
@@ -40,7 +41,7 @@
   dignissim, eu quando facilis pertinax mei, autem graece ex mel.
 ** work 2
 - company   :: [[https://www.example.com][Company 2]]
-- time      :: Januar 2016 - now
+- time      :: Jan 2016 - present
 - jobname   :: Computer Person
 - address   :: Company Street 2, 12345 Someplace
 - summary   ::

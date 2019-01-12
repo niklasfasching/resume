@@ -27,6 +27,7 @@ type Resume struct {
 		URL           string
 		Github        string
 		Stackoverflow string
+		LinkedIn      string
 		Summary       string
 	}
 

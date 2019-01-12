@@ -78,7 +78,6 @@
        }
 
        .job-name {
-         text-align: right;
          justify-content: flex-end;
          align-self: flex-end;
          padding: 0;
@@ -106,7 +105,16 @@
        }
 
        .time {
+         float: right;
          color: #888;
+       }
+
+       .address {
+         color: #888;
+       }
+
+       .summary {
+         padding-top: 0.75em;
        }
 
        li.experience + li.experience {
@@ -153,6 +161,9 @@
         {{ if .General.Stackoverflow }}
         <li class="stackoverflow"><span>stackoverflow</span>: {{ .General.Stackoverflow }}</li>
         {{ end }}
+        {{ if .General.LinkedIn }}
+        <li class="linked-in"><span>linkedIn</span>: {{ .General.LinkedIn }}</li>
+        {{ end }}
       </ul>
     </section>
 
@@ -181,13 +192,13 @@
       <h2 class="section-title title">Experience</h2>
       <ul>
         {{ range .Experience }}
-        <li class="experience"><span class="job-name">{{ .JobName }}</span>
-          <br>
-          <span class="company">{{ .Company }}</span>
-          <br>
-          <span class="address">{{ .Address }}</span>
-          <br>
+        <li class="experience">
+          <span class="job-name">{{ .JobName }}</span>
           <span class="time">{{ .Time }}</span>
+          <br>
+          <span class="company">{{ .Company }}</span>,
+
+          <span class="address">{{ .Address }}</span>
           <br>
           <p class="summary">{{ .Summary }}</p>
         </li>
