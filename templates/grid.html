@@ -59,14 +59,10 @@
 
      section.header {
        grid-column: 1 / -1;
-       display: flex;
-       justify-content: space-between;
-
        .name {
-         font-size: 5rem;
+         font-size: 4rem;
          letter-spacing: .3em;
          line-height: 1.2;
-
          .first-name {
            font-weight: 900;
          }
@@ -78,9 +74,7 @@
        }
 
        .job-name {
-         justify-content: flex-end;
-         align-self: flex-end;
-         padding: 0;
+         text-align: right;
        }
      }
 
@@ -210,6 +204,7 @@
       <h2 class="title">Skills</h2>
       {{ .Skills }}
     </section>
+    {{ if .Recommendations }}
     <section class="recommendations">
       <h2 class="title">Recommendations</h2>
       <ul>
@@ -218,5 +213,6 @@
         {{ end }}
       </ul>
     </section>
+    {{ end }}
   </body>
 </html>
