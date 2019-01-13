@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Resume</title>
     <style type='text/less'>
-     @import (css) url('https://fonts.googleapis.com/css?family=Karla');
+     @import (css) url('https://fonts.googleapis.com/css?family=Karla:400,700');
 
      @media print {
        @page { margin: 0; } /* hide header & footer added to margin of printed pdfs */
@@ -28,7 +28,7 @@
 
      ul {
        list-style: none;
-       padding: 0 0 1em 1em;
+       margin: 0 0 1.5em 1em;
        li:before {
          position: absolute;
          display: inline-block;
@@ -50,7 +50,7 @@
        margin: 1rem auto;
        display: grid;
        grid-template-columns: 1fr 2fr;
-       grid-auto-rows: auto;
+       grid-auto-rows: max-content;
      }
 
      section {
@@ -108,11 +108,11 @@
        }
 
        .summary {
-         padding-top: 0.75em;
+         padding-top: 0.5em;
        }
 
        li.experience + li.experience {
-         margin-top: 4em;
+         margin-top: 1.5em;
        }
      }
 
