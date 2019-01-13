@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <style type='text/less'>
+     @import (css) url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+     @media print {
+       @page { margin: 0; } /* hide header & footer added to margin of printed pdfs */
+       body { padding: 0 1cm 1cm 1cm; }
+     }
+
+     html {
+       font: 14px/1.4 'Karla', sans-serif;
+     }
+
+     * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
+
+     a {
+       color: black;
+       text-decoration: none;
+     }
+
+     ul {
+       list-style: none;
+       margin: 0 0 1.5em 1em;
+       li:before {
+         position: absolute;
+         display: inline-block;
+         content: "-";
+         width: 1em;
+         margin-left: -1em;
+       }
+     }
+
+     .title {
+       text-transform: uppercase;
+       letter-spacing: .15em;
+       padding-bottom: 0.25em;
+     }
+
+     .resume {
+       height: 297mm; /* DIN A4 */
+       width: 210mm;    /* DIN A4 */
+       margin: 1rem auto;
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       grid-auto-rows: max-content;
+     }
+
+     section {
+       padding: 1rem;
+     }
+
+     section.header {
+       grid-column: 1 / -1;
+       .name {
+         font-size: 4rem;
+         letter-spacing: .3em;
+         line-height: 1.2;
+         .first-name {
+           font-weight: 900;
+         }
+
+         .last-name {
+           font-weight: 100;
+           color: #666;
+         }
+       }
+
+       .job-name {
+         text-align: right;
+       }
+     }
+
+     section.education {
+       li.education + li.education {
+         margin-top: 1.5em;
+       }
+       .certificate {
+         font-weight: 900;
+       }
+       .time {
+         color: #888;
+       }
+     }
+
+     section.experience {
+       grid-column: 2;
+       grid-row: 3 / 5;
+
+       .job-name {
+         font-weight: 900;
+       }
+
+       .time {
+         float: right;
+         color: #888;
+       }
+
+       .address {
+         color: #888;
+       }
+
+       .summary {
+         padding-top: 0.5em;
+       }
+
+       li.experience + li.experience {
+         margin-top: 1.5em;
+       }
+     }
+
+     section.recommendations {
+       grid-column: 1 / -1;
+     }
+    </style>
+    <script data-strict-math="true" type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js'></script>
+  </head>
+
+  <body class="resume">
+    <section class="header">
+      <h1 class="name title">
+        <span class="first-name">
+          John
+        </span>
+        <br>
+        <span class="last-name">
+          Doe
+        </span>
+      </h1>
+      <h2 class="job-name title">
+        Computer Person
+      </h2>
+    </section>
+
+    <section class="contact">
+      <h2 class="section-title title">Contact</h2>
+      <ul class="basics">
+        <li class="phone"><a href="tel:+017612345678">0176 12345678</a></li>
+        <li class="email"><a href="mailto:john.doe@example.com">john.doe@example.com</a></li>
+        
+        <li class="address"><span>Some Street 1, 12345 Someplace</span></li>
+        
+      </ul>
+      <ul class="profiles">
+        
+        <li class="github"><span>github</span>: <a href="https://example.com">john.doe</a></li>
+        
+        
+        <li class="stackoverflow"><span>stackoverflow</span>: <a href="https://example.com">john.doe</a></li>
+        
+        
+        <li class="linked-in"><span>linkedIn</span>: <a href="https://example.com">John Doe</a></li>
+        
+      </ul>
+    </section>
+
+    <section class="summary">
+      <h2 class="title">Summary</h2>
+      <p>
+        Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
+eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
+periculis. At omnes reprimique cum. Ne iusto facilisi signiferumque usu,
+agam brute tantas an vim, mea enim iusto mucius at. His ea ullum
+dignissim, eu quando facilis pertinax mei, autem graece ex mel.
+      </p>
+    </section>
+
+    <section class="education">
+      <h2 class="section-title title">Education</h2>
+      <ul>
+        
+        <li class="education"><span class="certificate">BSc Computers</span>
+          <br>
+          <span class="institution">Computer University </span>
+          <br>
+          <span class="time">Sep 2000 - Jan 2003</span>
+        </li>
+        
+        <li class="education"><span class="certificate">MSc Computers</span>
+          <br>
+          <span class="institution">Computer University </span>
+          <br>
+          <span class="time">Sep 2003 - Jan 2005</span>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section class="experience">
+      <h2 class="section-title title">Experience</h2>
+      <ul>
+        
+        <li class="experience">
+          <span class="job-name">Computer Person</span>
+          <span class="time">Jan 2015 - Dec 2015</span>
+          <br>
+          <span class="company"><a href="https://www.example.com">Company</a></span>,
+
+          <span class="address">Company Street 1, 12345 Someplace</span>
+          <br>
+          <p class="summary">Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
+eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
+periculis. At omnes reprimique cum. Ne iusto facilisi signiferumque usu,
+agam brute tantas an vim, mea enim iusto mucius at. His ea ullum
+dignissim, eu quando facilis pertinax mei, autem graece ex mel.</p>
+        </li>
+        
+        <li class="experience">
+          <span class="job-name">Computer Person</span>
+          <span class="time">Jan 2016 - present</span>
+          <br>
+          <span class="company"><a href="https://www.example.com">Company 2</a></span>,
+
+          <span class="address">Company Street 2, 12345 Someplace</span>
+          <br>
+          <p class="summary">Lorem ipsum dolor sit amet, cu rebum simul quo, id quot facilis sententiae
+eam. Ea est eleifend gubergren voluptaria, ius ad latine tamquam
+periculis. At omnes reprimique cum. Ne iusto facilisi signiferumque usu,
+agam brute tantas an vim, mea enim iusto mucius at. His ea ullum
+dignissim, eu quando facilis pertinax mei, autem graece ex mel.</p>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section class="skills">
+      <h2 class="title">Skills</h2>
+      <ul>
+<li>
+<p>
+Computers
+</p>
+</li>
+<li>
+<p>
+Printers
+</p>
+</li>
+<li>
+<p>
+Big Data
+</p>
+<ul>
+<li>
+<p>
+MongoDB
+</p>
+</li>
+</ul>
+</li>
+</ul>
+    </section>
+    
+    <section class="recommendations">
+      <h2 class="title">Recommendations</h2>
+      <ul>
+        
+        <li><strong>Someone Special</strong>: I recommend John Doe</li>
+        
+        <li><strong>Someone Special 2</strong>: I also recommend John Doe very much</li>
+        
+      </ul>
+    </section>
+    
+  </body>
+</html>
