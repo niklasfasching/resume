@@ -48,6 +48,7 @@ type Resume struct {
 
 	Skills          string
 	Recommendations []string
+	Projects        string
 }
 
 var l = log.New(os.Stderr, "", 0)

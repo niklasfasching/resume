@@ -1,25 +1,18 @@
-.PHONY: default
-default: test build
+.PHONY: $(shell ls)
 
-.PHONY: install
-install:
-	go get -t ./...
+default: test
 
-.PHONY: build
-build: install
+build: $(shell find -name '*.go') go.sum go.mod
+	go install ./...
 	go build .
 
-.PHONY: test
-test: install
+test: build
 	go test ./... -v
 
-.PHONY: generate
 generate: generate-fixtures generate-gh-pages
 
-.PHONY: generate-fixtures
-generate-fixtures: install
+generate-fixtures:
 	go test ./... -generate
 
-.PHONY: generate-gh-pages
 generate-gh-pages: build
 	etc/generate-gh-pages
